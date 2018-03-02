@@ -1,0 +1,14 @@
+<h1>Bucket List Items</h1>
+<%=link_to 'New List', new_list_path %>
+<table class="striped">
+<tr>
+<th>Name</th>
+<th>Created</th>
+</tr>
+  <% @lists.each do |list| %>
+  <tr>
+    <td><%= link_to list.name, list %></td>
+    <td><%= list.created_at %></td>
+  </tr>
+  <% end %>
+</table>
